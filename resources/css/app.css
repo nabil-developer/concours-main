@@ -1,0 +1,554 @@
+/* General container settings */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1% 6%; /* Marge horizontale et verticale */
+  box-sizing: border-box;
+
+  background-image: url('/resources/images/background.jpg'); /* Ajoute l'image de fond */
+  background-size: cover; /* Couvre toute la zone du body */
+  background-position: center; /* Centre l'image */
+  background-repeat: no-repeat; /* Empêche la répétition de l'image */ 
+  font-family: Arial, sans-serif;
+  
+}
+
+/* Pour les écrans plus petits */
+@media (max-width: 768px) {
+  body {
+    margin: 5% 8%; /* Ajuste les marges pour les écrans plus petits */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 10% 10%; /* Ajuste encore plus les marges pour les très petits écrans */
+  }
+}
+#app {
+  width: 100%;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Optionnel : léger effet d'ombre */
+  padding: 20px; /* Optionnel : padding pour le contenu */
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  body {
+      margin: 5% 5%; /* Réduire la marge pour les petits écrans */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      margin: 2% 2%; /* Réduire davantage la marge pour les très petits écrans */
+  }
+}
+.container {
+  width: var(--containerWidth);
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px 5px 15px 30px;
+}
+.container header {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+}
+
+/* Header styles */
+
+
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 20px;
+  }
+
+  .header h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h2 {
+    font-size: 18px;
+  }
+
+  .header h3 {
+    font-size: 16px;
+  }
+}
+
+/* Form container settings */
+.form-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+/* Button styles */
+button {
+  background-color: #FF6B01;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  font-family: Arial, sans-serif;
+}
+
+button:hover {
+  background-color: #103e5b;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Form row container */
+.form-row {
+  display: flex;
+  justify-content: space-between; /* Espacement égal entre les champs */
+ /* margin-bottom: 15px; /* Espacement en bas de chaque ligne */
+}
+
+.form-row .form-group {
+  flex: 1; /* Les deux champs occupent 50% de la largeur */
+  margin-right: 10px; /* Espacement entre les deux colonnes */
+}
+
+.form-row .form-group:last-child {
+  margin-right: 0; /* Supprime l'espacement à droite pour le dernier élément de la ligne */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+select {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ebebeb;
+  padding: 5px 0;
+  margin-bottom: 2px;
+}
+.form-control.ar {
+  direction: rtl; 
+  text-align: right; 
+}
+.form-group {
+  margin-bottom: 5px;
+}
+
+.form-group label {
+  display: block;
+/*  font-weight: bold;*/
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: #103e5b;
+  font-family: Arial, sans-serif;
+}
+.form-group  .ar {
+  direction: rtl; 
+}
+
+/* Button styles */
+button {
+  background-color: #FF6B01;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+  font-family: Arial, sans-serif;
+}
+
+button:hover {
+  background-color: #103e5b;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column; /* Passe les champs en colonne sur les écrans plus petits */
+  }
+
+  .form-row .form-group {
+    margin-right: 0;
+    margin-bottom: 15px; /* Espacement en bas pour chaque champ dans une colonne */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 12% 10%; /* Ajuste encore plus les marges pour les très petits écrans */
+  }
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-dialog {
+  margin: 10px;
+}
+
+.modal-content {
+  font-family: Arial, sans-serif;
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 70%;
+  height: auto;
+}
+
+.modal-header
+{
+  /* padding: 10px 20px;*/
+   border-bottom: 1px solid #ddd;
+ /*  border-top: 1px solid #ddd;*/
+ }
+.modal-footer {
+ /* padding: 10px 20px;*/
+ /* border-bottom: 1px solid #ddd;*/
+  border-top: 1px solid #ddd;
+}
+
+.modal-body {
+  padding: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    max-width: 500px;
+  }
+
+  .modal-body {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 100%;
+    margin: 10% auto;
+    max-width: 100%;
+  }
+
+  .modal-body {
+    max-height: 200px;
+  }
+}
+
+/* Alert styles */
+.alert {
+  padding: revert;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.alert-danger {
+  color: #721c24;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-responsive {
+  display: block;
+  margin: 0 auto;
+}
+
+.h2C {
+  margin-top: 2px;
+  font-size: 24px;
+  color: #103e5b;
+}
+
+@media (max-width: 768px) {
+  .h2C {
+    font-size: 20px;
+    color: #103e5b;
+  }
+  h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .h2C {
+    font-size: 18px;
+    color: #103e5b;
+  }
+  h3 {
+    font-size: 16px;
+  }
+}
+
+.panel-body {
+  justify-content: center;  /* Centre horizontalement le contenu */
+  align-items: center;      /* Centre verticalement le contenu */
+  padding: 15px 60px;       /* Padding vertical de 10px et horizontal de 85px */
+  /*text-align: center;       /* Centre le texte si applicable */
+}
+
+
+/* Réduire le padding pour les écrans moyens */
+@media (max-width: 768px) {
+  .panel-body {
+    padding: 10px 40px;   /* Padding vertical de 10px et horizontal de 40px */
+  }
+  .panel-title {
+    font-weight: bold;  /* Rend le texte en gras */
+    font-size: 20px;    /* Définit la taille du texte à 28px */
+  }
+}
+
+/* Réduire encore plus le padding pour les petits écrans */
+@media (max-width: 480px) {
+  .panel-body {
+    padding: 5px 20px;    /* Padding vertical de 5px et horizontal de 20px */
+  }
+  .panel-title {
+    font-weight: bold;  /* Rend le texte en gras */
+    font-size: 16px;    /* Définit la taille du texte à 28px */
+  }
+}
+.button-container {
+  text-align: right; /* Aligne les boutons à droite */
+  margin-top: 20px;  /* Optionnel : ajoute un espace au-dessus des boutons */
+}
+
+.button-container button {
+  margin-left: 10px; /* Optionnel : ajoute un espace entre les boutons */
+}
+
+.test{
+  display: flex;
+  align-items: center;
+  background-color: #eb8b09;
+  border: 1px solid #ced4da;
+  padding: 10px
+}
+
+.panel-heading {
+  background-color: #eb8b09;
+  display: flex;
+  align-items: center;
+  padding: 1%; /* En pourcentage pour respecter votre format */
+  color: white;
+  text-align: center;  
+}
+
+.panel-title {
+   font-weight: bold;  /* Rend le texte en gras */
+  font-size: 24px; 
+  flex: 1; /* Occupe tout l'espace disponible */
+  direction: ltr; /* Direction par défaut (gauche à droite) */
+  text-align: left;
+}
+.text-danger {
+  color: #d9534f; /* Couleur rouge pour les messages d'erreur */
+  font-size: 0.85em; /* Taille de texte légèrement plus petite */
+ /*  font-weight: bold; */
+  margin-bottom: 1.5em; /* Espace au-dessus du message d'erreur */
+  display: block; /* Assure que le message est sur une nouvelle ligne */
+}
+/* Style pour le conteneur de sélection de la langue */
+/* Styles pour le conteneur de sélection de langue */
+.container {
+position: relative; /* Assure que les enfants positionnés en absolute sont par rapport à ce conteneur */
+}
+.container .container-language {
+position: absolute; /* Utilisez absolute pour rester à l'intérieur du conteneur .container */
+top: 10px; /* Ajustez la position verticale */
+right: 10px; /* Ajustez la position horizontale */
+z-index: 1000; /* Assurez-vous qu'il est au-dessus des autres éléments du conteneur */
+background-color: #fff; /* Fond blanc pour contraster avec l'arrière-plan */
+border: 1px solid #ced4da; /* Bordure légère autour du sélecteur */
+border-radius: 5px; /* Bordure arrondie */
+padding: 5px 10px; /* Espace intérieur pour les options */
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
+}
+
+.container .container-language select {
+border: none; /* Supprime la bordure par défaut du sélecteur */
+background-color: transparent; /* Fond transparent */
+font-size: 16px; /* Taille de police légèrement plus grande */
+color: #103e5b; /* Couleur du texte */
+cursor: pointer; /* Change le curseur lors du survol */
+outline: none; /* Supprime le contour lors de la sélection */
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+.container .container-language {
+  top: 5px; /* Ajuste l'espacement en haut pour les petits écrans */
+  right: 5px; /* Ajuste l'espacement à droite pour les petits écrans */
+  padding: 3px 8px; /* Réduit le padding pour les petits écrans */
+}
+
+.container .container-language select {
+  font-size: 14px; /* Réduit la taille de la police pour les petits écrans */
+}
+}
+
+
+
+/* Direction RTL pour .container */
+.rtl .container {
+text-align: right;
+margin-right: auto;
+margin-left: 0;
+}
+
+/* Direction RTL pour les éléments de formulaire */
+.rtl input[type="text"],
+.rtl input[type="number"],
+.rtl input[type="email"],
+.rtl select {
+direction: rtl;
+text-align: right;
+}
+
+/* Direction RTL pour les boutons */
+.rtl button {
+margin-left: 0;
+margin-right: 10px;
+}
+
+/* Direction RTL pour les labels et form-group */
+.rtl .form-group label {
+text-align: right;
+}
+
+/* Direction RTL pour la modal */
+.rtl .modal-content {
+direction: rtl;
+}
+
+/* Direction RTL pour l'alerte */
+.rtl .alert {
+text-align: right;
+}
+
+/* Direction RTL pour le conteneur de sélection de langue */
+.rtl .container .container-language {
+left: 10px;
+right: auto;
+}
+
+/* Direction RTL pour les panels */
+.rtl .panel-body {
+text-align: right;
+}
+.rtl .button-container {
+text-align: left; /* Aligne les boutons à gauche pour RTL */
+}
+.button-container button {
+margin-left: 10px; /* Optionnel : ajoute un espace entre les boutons */
+}
+
+.rtl .panel-body {
+direction: rtl;           /* Applique la direction RTL */
+justify-content: center;  /* Centre horizontalement le contenu */
+align-items: center;      /* Centre verticalement le contenu */
+padding: 15px 60px;       /* Padding vertical de 15px et horizontal de 60px */
+}
+
+.rtl .panel-title {
+font-weight: bold;  /* Rend le texte en gras */
+font-size: 24px;    /* Définit la taille du texte à 24px */
+direction: rtl;     /* Applique la direction RTL */
+text-align: right;  /* Aligne le texte à droite pour correspondre à RTL */
+}
+
+.loader {
+border: 8px solid #f3f3f3; /* Couleur de fond du loader */
+border-radius: 50%;
+border-top: 8px solid #3498db; /* Couleur du loader */
+
+animation: spin 1s linear infinite;
+display: inline-block; /* Permet au loader de s'afficher en ligne avec le texte */
+vertical-align: middle; /* Aligne le loader verticalement avec le texte */
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+.checkbox-container {
+display: flex;
+align-items: center;
+}
+
+.checkbox-container label {
+margin-left: 8px; /* Ajuste la marge selon tes besoins */
+}
+
+.checkbox-container .text-danger {
+margin-left: 8px; /* Ajuste la marge selon tes besoins */
+}
+.recaptcha-info {
+text-align: center; /* Centrer le texte, modifiez-le selon votre besoin */
+margin-top: 10px; /* Ajouter un espace au-dessus du texte */
+font-size: 12px; /* Ajuster la taille du texte */
+color: #6c757d; /* Couleur du texte */
+}
+
+small {
+	color: red;
+	display: none;
+}
+.mx_form_inv .mx_empty_filed ~ small {
+	display: block;
+}
+.mx_form_inv .mx_recaptcha_failed small {
+	display: block;
+}
